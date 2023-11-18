@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dataTemplate</title>
+    <link rel="stylesheet" href="template.css" />
+    <script defer src="template.js"></script>
+    <!-- <script src="path/to/html2pdf.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+  </head>
+  <body id="body">
+    <main id="main">
+      <h2>Kindly generate your code</h2>
+      <form action="">
+        <div class="logos">
+          <div class="label1">Network:</div>
+          <p for="mtn">MTN</p>
+          <input
+            id="radio"
+            type="radio"
+            value="MTN"
+            name="network"
+            class="radio"
+          />
+          <!-- <label for="glo">GLO</label>
+          <input type="radio" value="GLO" name="network" class="radio" /> -->
+          <p>AIRTEL</p>
+          <input
+            id="radio-network"
+            type="radio"
+            value="AIRTEL"
+            name="network"
+            class="radio"
+          />
+        </div>
+        <input
+          id="owner"
+          type="text"
+          class="owner all"
+          placeholder="Company Name..."
+        />
+        <select name="" id="amout" aria-placeholder="amount" class="amount all">
+          <option>Amount</option>
+          <option value="750MB">750MB</option>
+          <option value="1GB">1Gig</option>
+          <option value="1.5GB">1.5GIG</option>
+          <option value="2GB">2GIG</option>
+          <option value="3GB">3GIG</option>
+        </select>
+        <select
+          name=""
+          id="duration"
+          aria-placeholder="duration"
+          class="duration all"
+        >
+          <option>Duration</option>
+          <option value="1day">1 Day</option>
+          <option value="1week">7 Days</option>
+          <option value="1month">30 Days</option>
+        </select>
+        <input
+          type="text"
+          id="code"
+          class="code all"
+          placeholder="Code to load it..."
+        />
+        <input
+          type="text"
+          id="balanceall"
+          class="balance all"
+          placeholder="Code to check balance..."
+        />
+        <textarea
+          placeholder="Paste the code in this format:
+          44656865655
+          56565656565
+          65656565656
+          65656565656
+          32323232323"
+          name="codes"
+          id="codes"
+          cols="50"
+          rows="10"
+          class="codes all"
+        ></textarea>
+        <button type="submit" id="generate" class="generate">Generate</button>
+      </form>
+    </main>
+    <div class="templates hidden" id="temp">
+      <div class="template">
+        <div class="img_owner">
+          <p class="my_logo">MTN</p>
+          <h2 class="owner_name">MTN</h2>
+        </div>
+        <p class="pin" id="pin">45685454755</p>
+        <p class="code_amount" id="code_amount">
+          1Gig -<span class="code_duration">1Month</span>
+        </p>
+        <div class="how">
+          <p class="how_to_load" id="how_to_load">
+            Redeem: <span class="load">*4563</span>
+          </p>
+          <p class="balance" id="balance" name="balance">
+            Balance : <span class="balances" id="balances">*6564#</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="spinner">
+      <svg>
+        <use href="src/img/icons.svg#icon-loader"></use>
+      </svg>
+    </div> -->
+    <button class="download" id="download">
+      <a href="datatemplate.html">generate another</a>
+    </button>
+  </body>
+</html>
